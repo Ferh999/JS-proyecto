@@ -34,7 +34,7 @@ let continuarCompra = false;
 let subTotal = 0;
 
 do {
-    cantidad = Number(prompt("Elige la cantidad de controles Extra"));
+    cantidad = Number(prompt("Elige la cantidad de controles Extra. 1, 2 o 3"));
     
     switch(cantidad) {
         case 1:
@@ -77,7 +77,7 @@ let total = 0;
 let finalizarCompra = false;
 
 do {
-    envio = prompt("De que zona sos?")
+    envio = prompt("De que zona sos, CABA, GBA o Interior?")
 
     switch(envio.toUpperCase()) {
         case "CABA":
@@ -114,7 +114,7 @@ switch(metodoPago.toLowerCase()) {
         pago = false
         break;
     case "mercado pago":
-        alert(`Pagas con ${metodoPago} un total de $${total}`);
+        alert(`Abona con ${metodoPago} un total de $${total}`);
         pago = false
         break;
     default:
