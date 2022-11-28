@@ -5,7 +5,7 @@ let seleccioneConsola = false
 
 
 do {
-let consola = prompt("Elegí tu Consola PS5, XBox o Switch")
+let consola = prompt("Elegí tu Consola PS5, XBox o Switch");
 
 
 if (consola.toUpperCase() == "PS5") {
@@ -17,7 +17,7 @@ if (consola.toUpperCase() == "PS5") {
     seleccioneConsola = false
     precio1 = 302000;
 } else if (consola.toUpperCase() == "SWITCH") {
-    alert("Valor $" + Switch;)
+    alert("Valor $" + Switch);
     seleccioneConsola = false
     precio1 = 130000;
 } else {
@@ -34,7 +34,7 @@ let continuarCompra = false;
 let subTotal = 0;
 
 do {
-    cantidad = Number(prompt("Elige la cantidad de controles Extra"))
+    cantidad = Number(prompt("Elige la cantidad de controles Extra"));
     
     switch(cantidad) {
         case 1:
@@ -58,7 +58,7 @@ do {
 }while (continuarCompra)
 
 
-let cupon = prompt("Escriba el código para recibir un descuento")
+let cupon = prompt("Escriba el código para recibir un descuento");
 
 if(cupon == "coder".toLowerCase()) {
     alert("El codigo es correcto, recibiras un descuento del 5%");
@@ -97,7 +97,7 @@ do {
             precio3 = 0
             break;
     }total += precio1 + precio2 + precio3 - desc
-    alert("El total de su Compra más Envío es de $" + total)
+    alert("El total de su Compra más Envío es de $" + total);
 }while (finalizarCompra)
 
 let pago = false
@@ -122,4 +122,4 @@ switch(metodoPago.toLowerCase()) {
         pago = true         
 } 
 }while (pago)
-saludo = prompt("Muchas Gracias por su Compra, Vuelva Prontos!")
+saludo = prompt("Muchas Gracias por su Compra, Vuelva Prontos!");
