@@ -1,3 +1,34 @@
+const productos = [
+    {nombre: "PS5", precio: 348000},
+    {nombre: "XBox", precio: 302000},
+    {nombre: "Switch", precio: 130000},
+];
+
+let carrito = []
+let seleccion = prompt("Hola, desea comprar alguna consola?")
+
+while(seleccion != "si" && seleccion != "no") {
+    alert("indique si o no")
+    seleccion = prompt("Hola, desea comprar alguna consola?")
+    
+}
+
+do {
+
+if (seleccion == "si") {
+    alert("disponemos de");
+    let stockProductos = productos.map((productos) => productos.nombre + " " + "$" + productos.precio);
+    alert(stockProductos.join(" * ")); 
+    let elijo = true
+} else {
+    alert("Gracias vuelva prontos");
+
+}
+}while (seleccion == "no")
+
+
+
+
 const PS5 = 348000
 const XBox = 302000
 const Switch = 130000
@@ -5,7 +36,7 @@ let seleccioneConsola = false
 
 
 do {
-let consola = prompt("Elegí tu Consola PS5, XBox o Switch");
+let consola = prompt("Elegí tu Consola");
 
 
 if (consola.toUpperCase() == "PS5") {
@@ -123,3 +154,30 @@ switch(metodoPago.toLowerCase()) {
 } 
 }while (pago)
 saludo = prompt("Muchas Gracias por su Compra, Vuelva Prontos!");
+
+
+
+// Encargar Productos para Mantener Stock
+
+
+class Stock {
+    constructor(nombre, modelo, cantidad) {
+        this.nombre = nombre;
+        this.modelo = modelo;
+        this.cantidad = cantidad;
+    }
+}
+
+let listaStock = [];
+
+const agregarProducto = () => {
+    let nombre = prompt("Qué vas a encargar, PS, XBox o Nintendo?");
+    let modelo = prompt("Qué modelo es, 4, 5, Serie-X, Serie-S o Switch?");
+    let cantidad = parseInt(prompt("Qué cantidad?"));
+
+    let stockNuevo = new Stock(nombre, modelo, cantidad);
+
+    listaStock.push(stockNuevo);
+    console.log(listaStock);
+    return listaStock;
+}
