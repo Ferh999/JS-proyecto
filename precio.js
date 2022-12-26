@@ -154,30 +154,3 @@ switch(metodoPago.toLowerCase()) {
 } 
 }while (pago)
 saludo = prompt("Muchas Gracias por su Compra, Vuelva Prontos!");
-
-
-
-// Encargar Productos para Mantener Stock
-
-
-class Stock {
-    constructor(nombre, modelo, cantidad) {
-        this.nombre = nombre;
-        this.modelo = modelo;
-        this.cantidad = cantidad;
-    }
-}
-
-let listaStock = [];
-
-const agregarProducto = () => {
-    let nombre = prompt("Qué vas a encargar, PS, XBox o Nintendo?");
-    let modelo = prompt("Qué modelo es, 4, 5, Serie-X, Serie-S o Switch?");
-    let cantidad = parseInt(prompt("Qué cantidad?"));
-
-    let stockNuevo = new Stock(nombre, modelo, cantidad);
-
-    listaStock.push(stockNuevo);
-    console.log(listaStock);
-    return listaStock;
-}
