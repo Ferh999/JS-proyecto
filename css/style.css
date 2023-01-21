@@ -16,7 +16,7 @@ section {
     z-index: -1;
 }
 #carouselExampleFade img {
-    height: 100%;
+    height: 50%;
     size-adjust: cover;
 }
 h1 {
