@@ -5,23 +5,23 @@
 }
 
 section {
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #carouselExampleFade {
-    height: 30vh;
+    height: 80vh;
     width: 100vw;
     z-index: -1;
 }
 #carouselExampleFade img {
-    height: 50%;
-    size-adjust: cover;
+    height: 70vh;
 }
 
+
 .imagen{
-    max-width:100%;
+    width:70%;
 }
 
 a{
@@ -60,10 +60,10 @@ a{
 }
 
 .usuarios {
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    position: static;
 }
 
 #boton {
@@ -75,3 +75,15 @@ a{
     background-color: cornflowerblue;
 }
 
+.user {
+    display: flex;
+    justify-content:flex-end;
+    align-content: center;
+    margin-top:50px;
+    width: 130px;
+    height: 90px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 25px;
+    
+}

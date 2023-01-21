@@ -48,7 +48,7 @@ const carritoContenedor = document.querySelector("#conteiner");
 const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
 
-const procesarCompra = document.querySelector("#procesarCompra");
+const compra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  procesarCompra.addEventListener("click", () => {
+  compra.addEventListener("click", () => {
     if (carrito.length === 0) {
       Swal.fire({
         icon: "error",
@@ -126,6 +126,9 @@ const agregarProducto = (id) => {
 
 };
 
+
+
+
 const mostrarCarrito = () => {
   const modalBody = document.querySelector(".modal .modal-body");
   if (modalBody) {
@@ -141,9 +144,9 @@ const mostrarCarrito = () => {
         <div>
         <p>Producto: ${nombre}</p>
         <p>Modelo: ${modelo}</p>
-      <p>Precio: ${precio}</p>
-      <p>Cantidad :${cantidad}</p>
-      <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
+        <p>Precio: ${precio}</p>
+        <p>Cantidad :${cantidad}</p>
+        <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
       </div>
       
@@ -151,6 +154,8 @@ const mostrarCarrito = () => {
       `;
     });
   }
+
+
 
   if (carrito.length === 0) {
     console.log("vacio");
@@ -181,6 +186,11 @@ function eliminarProducto(id) {
   carrito = carrito.filter((consola) => consola.id !== consolaId);
   mostrarCarrito();
 }
+
+
+
+
+
 
 
 const boton = document.getElementById("boton");
